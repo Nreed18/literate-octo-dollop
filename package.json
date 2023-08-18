@@ -1,0 +1,53 @@
+{
+  "name": "familyradioalexa",
+  "version": "1.1.1",
+  "description": "Family Radio Alexa Skill",
+  "main": "handler.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "echo 'sls deploy' && sls deploy && echo 'sls alexa update' && sls alexa update && echo 'sls alexa build' && sls alexa build && echo 'DONE'",
+    "update-alexa": "echo 'sls alexa update' && sls alexa update && echo 'sls alexa build' && sls alexa build && echo 'DONE'",
+    "update-lambda": "echo 'sls deploy' && sls deploy && echo 'DONE'",
+    "logs": "sls logs -f alexa",
+    "logs-follow": "sls logs -f alexa -t",
+    "test-trial-1": "ask api simulate-skill -s amzn1.ask.skill.bef8393d-c252-48e6-a8f8-05cefea37933 -f json-input.json -l en-US -p familyradio",
+    "run-tsc": "echo 'Starting tsc'; tsc handler.ts; echo 'Done with tsc' ",
+    "process-chapters": "ts-node processChapters.ts > processChaptersOutput.json",
+    "commit": "commit-wizard",
+    "pretty": "prettier --write '*.{ts,js,yml,json}'"
+  },
+  "dependencies": {
+    "ask-sdk": "^2.10.0",
+    "axios": "^0.21.1",
+    "dotenv": "^6.2.0",
+    "mysql2": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.66",
+    "prettier": "^1.19.1",
+    "serverless": "^1.83.3",
+    "serverless-alexa-skills": "^0.1.0",
+    "serverless-webpack": "^5.3.5",
+    "source-map-support": "^0.5.19",
+    "ts-loader": "^4.2.0",
+    "typescript": "^4.1.3",
+    "webpack": "^4.46.0"
+  },
+  "author": "DarinDev1000",
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  },
+  "config": {
+    "pre-git": {
+      "pre-commit": [],
+      "pre-push": [],
+      "post-commit": [],
+      "post-checkout": [],
+      "post-merge": []
+    }
+  },
+  "prettier": {
+    "printWidth": 180,
+    "arrowParens": "always"
+  }
+}

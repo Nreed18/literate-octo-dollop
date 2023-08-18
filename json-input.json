@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "amzn1.echo-api.request.6179ebfd-e8b7-4f78-a40b-2f8140c454ba",
+    "timestamp": "2020-02-13T23:37:42Z",
+    "locale": "en-US",
+    "intent": {
+      "name": "StreamIntent",
+      "confirmationStatus": "NONE",
+      "slots": {
+        "streamArea": {
+          "name": "streamArea",
+          "confirmationStatus": "NONE"
+        }
+      }
+    }
+  }
+}
